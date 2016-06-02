@@ -19,10 +19,12 @@ class MainTabBarVC: UITabBarController {
     func loadChileViewController(childVC:UIViewController,title:String,iconImage:String){
         let nav = MainNavVC(rootViewController:childVC)
         childVC.title = title
-        let selectedImage = "\(iconImage)__selected"
-//        let selectIcon = UIImage.imageWithRenderingMode()
+        let selectedImage = "\(iconImage)_selected"
+
+        let selectIcon = UIImage(named:selectedImage)
+        selectIcon?.imageWithRenderingMode(.AlwaysOriginal)
         childVC.tabBarItem.image = UIImage(named: iconImage)
-        childVC.tabBarItem.selectedImage = UIImage(named: selectedImage)
+        childVC.tabBarItem.selectedImage = UIImage(named: selectedImage)?.imageWithRenderingMode(.AlwaysOriginal)
         addChildViewController(nav)
     }
     
