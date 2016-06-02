@@ -12,6 +12,11 @@
 		91209C1C1D004D44007F2CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91209C1B1D004D44007F2CD5 /* Assets.xcassets */; };
 		91209C1F1D004D44007F2CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91209C1D1D004D44007F2CD5 /* LaunchScreen.storyboard */; };
 		91209C2B1D00542D007F2CD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91209C2A1D00542D007F2CD5 /* Images.xcassets */; };
+		9120AAFB1D00568E007F2CD5 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AAFA1D00568E007F2CD5 /* MainTabBarVC.swift */; };
+		9120AAFD1D0056F5007F2CD5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AAFC1D0056F5007F2CD5 /* DiscoverViewController.swift */; };
+		9120AAFF1D005701007F2CD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AAFE1D005701007F2CD5 /* HomeViewController.swift */; };
+		9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB001D005712007F2CD5 /* MessageViewController.swift */; };
+		9120AB031D005722007F2CD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB021D005722007F2CD5 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		91209C1E1D004D44007F2CD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91209C201D004D44007F2CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91209C2A1D00542D007F2CD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9120AAFA1D00568E007F2CD5 /* MainTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		9120AAFC1D0056F5007F2CD5 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		9120AAFE1D005701007F2CD5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9120AB001D005712007F2CD5 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		9120AB021D005722007F2CD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,11 @@
 		91209C131D004D44007F2CD5 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				9120AAEB1D005562007F2CD5 /* Main(主页控制器) */,
+				9120AAEC1D005562007F2CD5 /* Model（模型） */,
+				9120AAED1D005562007F2CD5 /* Tools（工具类） */,
+				9120AAEE1D005562007F2CD5 /* view（视图和控制器） */,
+				9120AAF31D005562007F2CD5 /* ViewModel（视图模型） */,
 				91209C141D004D44007F2CD5 /* AppDelegate.swift */,
 				91209C161D004D44007F2CD5 /* ViewController.swift */,
 				91209C1B1D004D44007F2CD5 /* Assets.xcassets */,
@@ -62,6 +77,78 @@
 				91209C2A1D00542D007F2CD5 /* Images.xcassets */,
 			);
 			path = weibo;
+			sourceTree = "<group>";
+		};
+		9120AAEB1D005562007F2CD5 /* Main(主页控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				9120AAFA1D00568E007F2CD5 /* MainTabBarVC.swift */,
+			);
+			path = "Main(主页控制器)";
+			sourceTree = "<group>";
+		};
+		9120AAEC1D005562007F2CD5 /* Model（模型） */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model（模型）";
+			sourceTree = "<group>";
+		};
+		9120AAED1D005562007F2CD5 /* Tools（工具类） */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools（工具类）";
+			sourceTree = "<group>";
+		};
+		9120AAEE1D005562007F2CD5 /* view（视图和控制器） */ = {
+			isa = PBXGroup;
+			children = (
+				9120AAEF1D005562007F2CD5 /* Discover（发现） */,
+				9120AAF01D005562007F2CD5 /* Home（首页） */,
+				9120AAF11D005562007F2CD5 /* Message（消息） */,
+				9120AAF21D005562007F2CD5 /* Profile（我） */,
+			);
+			path = "view（视图和控制器）";
+			sourceTree = "<group>";
+		};
+		9120AAEF1D005562007F2CD5 /* Discover（发现） */ = {
+			isa = PBXGroup;
+			children = (
+				9120AAFC1D0056F5007F2CD5 /* DiscoverViewController.swift */,
+			);
+			path = "Discover（发现）";
+			sourceTree = "<group>";
+		};
+		9120AAF01D005562007F2CD5 /* Home（首页） */ = {
+			isa = PBXGroup;
+			children = (
+				9120AAFE1D005701007F2CD5 /* HomeViewController.swift */,
+			);
+			path = "Home（首页）";
+			sourceTree = "<group>";
+		};
+		9120AAF11D005562007F2CD5 /* Message（消息） */ = {
+			isa = PBXGroup;
+			children = (
+				9120AB001D005712007F2CD5 /* MessageViewController.swift */,
+			);
+			path = "Message（消息）";
+			sourceTree = "<group>";
+		};
+		9120AAF21D005562007F2CD5 /* Profile（我） */ = {
+			isa = PBXGroup;
+			children = (
+				9120AB021D005722007F2CD5 /* ProfileViewController.swift */,
+			);
+			path = "Profile（我）";
+			sourceTree = "<group>";
+		};
+		9120AAF31D005562007F2CD5 /* ViewModel（视图模型） */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel（视图模型）";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9120AAFF1D005701007F2CD5 /* HomeViewController.swift in Sources */,
 				91209C171D004D44007F2CD5 /* ViewController.swift in Sources */,
+				9120AAFD1D0056F5007F2CD5 /* DiscoverViewController.swift in Sources */,
+				9120AAFB1D00568E007F2CD5 /* MainTabBarVC.swift in Sources */,
+				9120AB031D005722007F2CD5 /* ProfileViewController.swift in Sources */,
+				9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */,
 				91209C151D004D44007F2CD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
