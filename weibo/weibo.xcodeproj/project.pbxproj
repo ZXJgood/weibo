@@ -17,7 +17,7 @@
 		9120AAFF1D005701007F2CD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AAFE1D005701007F2CD5 /* HomeViewController.swift */; };
 		9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB001D005712007F2CD5 /* MessageViewController.swift */; };
 		9120AB031D005722007F2CD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB021D005722007F2CD5 /* ProfileViewController.swift */; };
-		9120AB051D0058F5007F2CD5 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB041D0058F5007F2CD5 /* MainNavVC.swift */; };
+		9120AB051D0058F5007F2CD5 /* rootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB041D0058F5007F2CD5 /* rootViewController.swift */; };
 		E96AB82875327345817FF85A /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E913F69BF323C26BD1F67790 /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		9120AAFE1D005701007F2CD5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9120AB001D005712007F2CD5 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		9120AB021D005722007F2CD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		9120AB041D0058F5007F2CD5 /* MainNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
+		9120AB041D0058F5007F2CD5 /* rootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rootViewController.swift; sourceTree = "<group>"; };
 		E913F69BF323C26BD1F67790 /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8AAF1A2ED655314BF54421 /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,12 +81,12 @@
 		91209C131D004D44007F2CD5 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				91209C141D004D44007F2CD5 /* AppDelegate.swift */,
 				9120AAEB1D005562007F2CD5 /* Main(主页控制器) */,
 				9120AAEC1D005562007F2CD5 /* Model（模型） */,
 				9120AAED1D005562007F2CD5 /* Tools（工具类） */,
 				9120AAEE1D005562007F2CD5 /* view（视图和控制器） */,
 				9120AAF31D005562007F2CD5 /* ViewModel（视图模型） */,
-				91209C141D004D44007F2CD5 /* AppDelegate.swift */,
 				91209C161D004D44007F2CD5 /* ViewController.swift */,
 				91209C1B1D004D44007F2CD5 /* Assets.xcassets */,
 				91209C1D1D004D44007F2CD5 /* LaunchScreen.storyboard */,
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9120AAFA1D00568E007F2CD5 /* MainTabBarVC.swift */,
-				9120AB041D0058F5007F2CD5 /* MainNavVC.swift */,
+				9120AB041D0058F5007F2CD5 /* rootViewController.swift */,
 			);
 			path = "Main(主页控制器)";
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 				9120AAFD1D0056F5007F2CD5 /* DiscoverViewController.swift in Sources */,
 				9120AAFB1D00568E007F2CD5 /* MainTabBarVC.swift in Sources */,
 				9120AB031D005722007F2CD5 /* ProfileViewController.swift in Sources */,
-				9120AB051D0058F5007F2CD5 /* MainNavVC.swift in Sources */,
+				9120AB051D0058F5007F2CD5 /* rootViewController.swift in Sources */,
 				9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */,
 				91209C151D004D44007F2CD5 /* AppDelegate.swift in Sources */,
 			);
