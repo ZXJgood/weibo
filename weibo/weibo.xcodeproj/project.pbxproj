@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9110B3581D043740003F09EC /* UIButton+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110B3571D043740003F09EC /* UIButton+extention.swift */; };
+		9110B35A1D043F37003F09EC /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110B3591D043F37003F09EC /* UIImage+extension.swift */; };
+		9110B35C1D0441FD003F09EC /* UIImageView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110B35B1D0441FD003F09EC /* UIImageView+extention.swift */; };
+		9110B35E1D044205003F09EC /* UILabel+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110B35D1D044205003F09EC /* UILabel+extention.swift */; };
 		91209C151D004D44007F2CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91209C141D004D44007F2CD5 /* AppDelegate.swift */; };
 		91209C171D004D44007F2CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91209C161D004D44007F2CD5 /* ViewController.swift */; };
 		91209C1C1D004D44007F2CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91209C1B1D004D44007F2CD5 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		271889F07823D52380805D09 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
+		9110B3571D043740003F09EC /* UIButton+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
+		9110B3591D043F37003F09EC /* UIImage+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		9110B35B1D0441FD003F09EC /* UIImageView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extention.swift"; sourceTree = "<group>"; };
+		9110B35D1D044205003F09EC /* UILabel+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+extention.swift"; sourceTree = "<group>"; };
 		91209C111D004D44007F2CD5 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91209C141D004D44007F2CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91209C161D004D44007F2CD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 		9120AAED1D005562007F2CD5 /* Tools（工具类） */ = {
 			isa = PBXGroup;
 			children = (
+				9110B3571D043740003F09EC /* UIButton+extention.swift */,
+				9110B3591D043F37003F09EC /* UIImage+extension.swift */,
+				9110B35B1D0441FD003F09EC /* UIImageView+extention.swift */,
+				9110B35D1D044205003F09EC /* UILabel+extention.swift */,
 			);
 			path = "Tools（工具类）";
 			sourceTree = "<group>";
@@ -304,8 +316,12 @@
 				91209C171D004D44007F2CD5 /* ViewController.swift in Sources */,
 				9120AAFD1D0056F5007F2CD5 /* DiscoverViewController.swift in Sources */,
 				9120AAFB1D00568E007F2CD5 /* MainTabBarVC.swift in Sources */,
+				9110B3581D043740003F09EC /* UIButton+extention.swift in Sources */,
+				9110B35E1D044205003F09EC /* UILabel+extention.swift in Sources */,
 				9120AB031D005722007F2CD5 /* ProfileViewController.swift in Sources */,
+				9110B35C1D0441FD003F09EC /* UIImageView+extention.swift in Sources */,
 				9120AB051D0058F5007F2CD5 /* rootViewController.swift in Sources */,
+				9110B35A1D043F37003F09EC /* UIImage+extension.swift in Sources */,
 				9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */,
 				91209C151D004D44007F2CD5 /* AppDelegate.swift in Sources */,
 			);

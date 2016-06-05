@@ -17,6 +17,11 @@ import UIKit
 //class只放生命周期方法，构造方法，属性
 class MainTabBarVC: UITabBarController {
 
+    //action如果有参数，需要在方法名后面加冒号，一个参数就加一个：两个加两个：
+    //懒加载（加号按钮属性） ---使用按钮的构造便利器
+    private lazy var customBtn: UIButton = UIButton(title: "",  image: "tabbar_compose_icon_add", backGroundImage: "tabbar_compose_button", target: self, action: "compose", event: .TouchUpInside)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置tabbar的渲染
@@ -26,20 +31,8 @@ class MainTabBarVC: UITabBarController {
         setUpAddBtn()//设置加好按钮
         settabbar()
     }
+   
     
-    //懒加载加好按钮属性
-    private lazy var customBtn:UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: .Normal)
-        button.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: .Selected)
-        
-        button.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: .Normal)
-        button.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: .Selected)
-        
-        //监听按钮点击事件
-        button.addTarget(self, action: "addBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
-        return button
-    }()
 }
 
 
