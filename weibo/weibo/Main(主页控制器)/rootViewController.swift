@@ -9,22 +9,89 @@
 import UIKit
 
 class rootViewController: UIViewController{
+    //是否登录
+    var isLogin = false
+    
+    //访客视图
+    var visitorView: VisotorView?
+    
+    //tableView
+    lazy var tableView: UITableView = UITableView()
+    
+    //是否是上拉
+    var ispullUp: Bool = false
+    
+    //下拉刷新控件
+    lazy var refreshControl: UIRefreshControl = UIRefreshControl()
+    
+    //上拉刷新控件
+    lazy var footRefreshControl: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+    
+    //MARK:-懒加载数据
+    lazy var dataArray: [Int] = {
+        var array: [Int] = []
+        for i in (981...1000).reverse() {
+            array.append(i)
+        }
+        return array
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        setupView()
     }
-    //MARK:-懒加载数据
-    lazy var dateArray:[String] = {
-        return ["jacl","hello","tom"]
-    }()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.frame = view.bounds
+    }
 }
-//MARK:-实现数据源代理方法
-extension rootViewController:UITableViewDelegate,UITableViewDataSource  {
+
+//MARK:-设置UI
+extension rootViewController {
+    func setupView() {
+        view.backgroundColor = UIColor.whiteColor()
+        setupTableView()
+        setupRefresh()
+        
+        if (!isLogin){ //是否登录
+         setupVisotorView() //设置访客视图
+        }
+    }
+    func setupTableView(){
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    //设置刷新
+    func setupRefresh() {
+        //下拉刷新
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: "loadData", forControlEvents: .ValueChanged)
+        
+        //上拉刷新
+        tableView.tableFooterView = footRefreshControl
+    }
+    
+    func setupVisotorView() {
+       visitorView = VisotorView()
+       view.addSubview(visitorView!)
+    }
+}
+
+
+extension rootViewController {
+    func loadData(){
+    
+    }
+
+}
+
+//MARK:-实现数据源方法
+extension rootViewController:UITableViewDataSource  {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dateArray.count
+        return dataArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -33,8 +100,18 @@ extension rootViewController:UITableViewDelegate,UITableViewDataSource  {
         {
           cell = UITableViewCell(style: .Default, reuseIdentifier: "customCell")
         }
-        cell?.textLabel?.text = dateArray[indexPath.row]
+//        cell?.textLabel?.text = dataArray[indexPath.row]
         return cell!
     }
+}
 
+//MARK:-实现代理方法
+extension rootViewController:UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    //当某一行的cell将要显示的时候，会执行该方法
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
 }
