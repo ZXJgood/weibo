@@ -13,7 +13,9 @@ class MessageViewController: rootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-                view.backgroundColor = UIColor.whiteColor()    }
+        //设置visitorView
+        visitorView?.setVistitorView("关注一些人，回这里看看有什么惊喜", icon: "visitordiscover_image_profile")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

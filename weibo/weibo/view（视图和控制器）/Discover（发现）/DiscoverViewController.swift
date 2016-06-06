@@ -13,7 +13,9 @@ class DiscoverViewController: rootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.whiteColor()
+        //设置visitorView
+        visitorView?.setVistitorView("登录后，最新，最热微博都会在这里展示，不会与最新潮流擦肩而过", icon: "visitordiscover_image_message")
+        
     }
 
     override func didReceiveMemoryWarning() {
