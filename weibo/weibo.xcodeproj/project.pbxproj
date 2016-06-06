@@ -23,6 +23,7 @@
 		9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB001D005712007F2CD5 /* MessageViewController.swift */; };
 		9120AB031D005722007F2CD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB021D005722007F2CD5 /* ProfileViewController.swift */; };
 		9120AB051D0058F5007F2CD5 /* rootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120AB041D0058F5007F2CD5 /* rootViewController.swift */; };
+		913077CA1D04FE8E0096916C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913077C91D04FE8E0096916C /* AuthViewController.swift */; };
 		E96AB82875327345817FF85A /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E913F69BF323C26BD1F67790 /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		9120AB001D005712007F2CD5 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		9120AB021D005722007F2CD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9120AB041D0058F5007F2CD5 /* rootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rootViewController.swift; sourceTree = "<group>"; };
+		913077C91D04FE8E0096916C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E913F69BF323C26BD1F67790 /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8AAF1A2ED655314BF54421 /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 		9120AAEE1D005562007F2CD5 /* view（视图和控制器） */ = {
 			isa = PBXGroup;
 			children = (
+				913077C81D04FE650096916C /* AuthViewController（登录认证） */,
 				9110B35F1D044A18003F09EC /* VisitorView(访客视图) */,
 				9120AAEF1D005562007F2CD5 /* Discover（发现） */,
 				9120AAF01D005562007F2CD5 /* Home（首页） */,
@@ -190,6 +193,14 @@
 			children = (
 			);
 			path = "ViewModel（视图模型）";
+			sourceTree = "<group>";
+		};
+		913077C81D04FE650096916C /* AuthViewController（登录认证） */ = {
+			isa = PBXGroup;
+			children = (
+				913077C91D04FE8E0096916C /* AuthViewController.swift */,
+			);
+			name = "AuthViewController（登录认证）";
 			sourceTree = "<group>";
 		};
 		CE933651C23E20659BA50BCB /* Pods */ = {
@@ -333,6 +344,7 @@
 				9110B35C1D0441FD003F09EC /* UIImageView+extention.swift in Sources */,
 				9120AB051D0058F5007F2CD5 /* rootViewController.swift in Sources */,
 				9110B35A1D043F37003F09EC /* UIImage+extension.swift in Sources */,
+				913077CA1D04FE8E0096916C /* AuthViewController.swift in Sources */,
 				9110B3611D044A4E003F09EC /* VisotorView.swift in Sources */,
 				9120AB011D005712007F2CD5 /* MessageViewController.swift in Sources */,
 				91209C151D004D44007F2CD5 /* AppDelegate.swift in Sources */,

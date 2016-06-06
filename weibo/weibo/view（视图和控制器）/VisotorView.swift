@@ -23,13 +23,15 @@ import SnapKit
 //enum Request {
 //
 //}
+//设置代理协议和方法
 protocol VisitorDelegate {
     func didlogin();
 }
 
 class VisotorView: UIView {
     
-    var delegate:VisitorDelegate?
+    var delegate:VisitorDelegate?//设置代理属性
+    
     //添加子控件： 从上往下，从左往右
     //图标
     //lazy var 的属性最好在定义的时候指定一下数据类型

@@ -72,9 +72,10 @@ extension rootViewController {
         //上拉刷新
         tableView.tableFooterView = footRefreshControl
     }
-    
+    //实现访客视图
     func setupVisotorView() {
        visitorView = VisotorView()
+        visitorView?.delegate = self//设置代理对象
        view.addSubview(visitorView!)
     }
 }
@@ -114,4 +115,14 @@ extension rootViewController:UITableViewDelegate {
     //当某一行的cell将要显示的时候，会执行该方法
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
     }
+}
+
+//实现VisitorDelegate代理方法
+extension rootViewController:VisitorDelegate {
+    func didlogin() {
+        let authViewController = AuthViewController()
+        let naviagetionController = UINavigationController(rootViewController: authViewController)
+        presentViewController(naviagetionController, animated: true, completion: nil)
+    }
+
 }
