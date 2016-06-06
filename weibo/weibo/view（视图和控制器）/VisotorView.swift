@@ -7,8 +7,29 @@
 //
 
 import UIKit
+import SnapKit
+//在swfit中定义代理
+//
+//swfit中定义某种类型
+
+//class Person {
+//
+//}
+//
+//struct CARect {
+//
+//}
+//
+//enum Request {
+//
+//}
+protocol VisitorDelegate {
+    func didlogin();
+}
 
 class VisotorView: UIView {
+    
+    var delegate:VisitorDelegate?
     //添加子控件： 从上往下，从左往右
     //图标
     //lazy var 的属性最好在定义的时候指定一下数据类型
@@ -105,7 +126,40 @@ extension VisotorView {
         //2. 每写完一个控件的自动布局，需要运行一下，看看效果，不要所有控件全部写完再看效果。
         //3. 对于可能被拉伸或者宽高可能动态调整的控件，如果将其作为参照，需要特别留意。
         //4. 不要忘了写参照控件的参照属性
-
+        iconView.snp_makeConstraints {
+            (make) -> Void in
+            make.centerY.equalTo(self).offset(-100)
+            make.centerX.equalTo(self)
+        }
+        circleView.snp_makeConstraints { (make) -> Void in
+           make.center.equalTo(iconView)
+        }
+        //maskIconview有可能被拉伸
+        maskIconView.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(circleView)
+            make.centerY.equalTo(circleView).offset(45)
+            make.width.equalTo(self)
+        }
+        textLabel.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(circleView)
+            make.centerY.equalTo(circleView.snp_bottom).offset(50)
+            make.left.equalTo(self).offset(50)
+            make.right.equalTo(self).offset(-50)
+        }
+        
+        registButton.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(self).offset(80)
+            make.centerY.equalTo(circleView.snp_bottom).offset(120)
+            make.width.equalTo(100)
+        }
+        
+        loginButton.snp_makeConstraints { (make) -> Void in
+            make.right.equalTo(self).offset(-80)
+            make.centerY.equalTo(circleView.snp_bottom).offset(120)
+            make.width.equalTo(100)
+        }
+        
+        addAnimation()
     
     }
 
@@ -118,6 +172,7 @@ extension VisotorView {
     
     func login (button: UIButton) {
         print("登录")
+        delegate?.didlogin()
     }
 }
 
